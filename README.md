@@ -1,30 +1,27 @@
 
 ## Ionic 通过webpack脚本，切换服务器环境
 
-1. 在src下创建文件夹environments，并创建三个对应的环境配置文件
+1.在src下创建文件夹environments，并创建三个对应的环境配置文件
 
 * src/environments/environment.dev.ts
 * src/environments/environment.uat.ts
 * src/environments/environment.prod.ts
 
-2. 然后在项目根目录中创建文件夹config，里面创建文件webpack.config.js
+2.然后在项目根目录中创建文件夹config，里面创建文件webpack.config.js
 
 * config/webpack.config.js
 
-3. 修改项目的package.json文件，添加：
+3.修改项目的package.json文件，添加：
 
 ```
-
 "config": {
     "ionic_webpack": "./config/webpack.config.js"
 }
-
 ```
 
-4. 修改tsconfig.json文件，添加
+4.修改tsconfig.json文件，添加
 
 ```
-
 {
   "compilerOptions": {
     "baseUrl": "./src",
@@ -35,17 +32,13 @@
     }
   }
 }
-
-
 ```
 
-
-5. 添加启动Script
+5.添加启动Script
 
 * 修改package.json
 
 ```
-
 "scripts": {
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
@@ -61,7 +54,6 @@
     "build:prod":"NODE_ENV=prod ionic cordova build android --prod",
 
 }
-
 ```
 
-7. npm run serve:dev
+7.npm run serve:dev
