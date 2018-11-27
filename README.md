@@ -51,9 +51,9 @@
 
     "build:dev":"NODE_ENV=dev ionic cordova build android --prod",
     "build:uat":"NODE_ENV=uat ionic cordova build android --prod",
-    "build:prod":"NODE_ENV=prod ionic cordova build android --prod",
+    "build:prod":"NODE_ENV=prod ionic cordova build android --prod"
 
 }
 ```
 
-7.npm run serve:dev
+6.npm run serve:dev
