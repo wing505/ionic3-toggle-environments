@@ -8,7 +8,13 @@
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "lint": "ionic-app-scripts lint",
+    "serve:dev": "NODE_ENV=dev ionic serve",
+    "serve:uat": "NODE_ENV=uat ionic serve",
+    "serve:prod": "NODE_ENV=prod ionic serve",
+    "build:dev": "NODE_ENV=dev ionic cordova build android --prod",
+    "build:uat": "NODE_ENV=uat ionic cordova build android --prod",
+    "build:prod": "NODE_ENV=prod ionic cordova build android --prod"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -34,5 +40,8 @@
     "@ionic/app-scripts": "3.2.0",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "config": {
+    "ionic_webpack": "./config/webpack.config.js"
+  }
 }
